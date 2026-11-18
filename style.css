@@ -1,0 +1,290 @@
+/** RESET DA APLICAÇÃO **/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--Color-button);
+}
+
+/** RESET DA APLICAÇÃO **/
+/** VARIÁVEIS*/
+
+:root{
+    --bg:#FAFAFA;
+    --Color-button: #3c96ed;
+    --color-boder: rgb(155, 155, 155);
+    --placeholder: rgb(165, 164, 164);
+    --color-text:#000000;
+    --divisor:#8e8e8e;
+    --border-input: #747373;
+    --line: #e6e6e6;
+    --text-small:grey;
+    --messaage:#8e8e8e;
+
+}
+/** VARIÁVEIS*/
+
+
+body {
+    background-color: #FAFAFA;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+#wrapper {
+    height: 100vh;
+}
+
+#contaneir {
+    margin: 0 auto;
+    min-height: 100%;
+    width: 800px;
+    display: flex;
+    align-items: center;
+}
+
+.column {
+    flex-grow: 1;
+    width: 50%;
+}
+
+.left {
+    background-image: url(assets/main-foto.png);
+    background-size: 450px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    margin-bottom: 50px;
+    margin-right: 20px;
+}
+
+.right {
+    padding-left: 20px;
+}
+
+.login-panel {
+    background-color: #FFF;
+    border: 1px solid rgb(155, 155, 155);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo-img {
+
+    width: 175px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="password"],
+input[type="text"] {
+    background-color: #FFFFFF;
+    border: 1px solid rgb(155, 155, 155);
+    height: 40px;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 13px;
+    width: 320px;
+    color: #000000;
+
+}
+
+input[type="password"]::placeholder,
+input[type="text"]::placeholder {
+    color: rgb(165, 164, 164);
+}
+
+input[type="password"]:focus,
+input[type="text"]:focus {
+    border: 1px solid #747373;
+}
+
+input[type="submit"] {
+    width: 320px;
+    margin-top: 10px;
+    height: 30px;
+    border: 0;
+    background-color:var(--Color-button);
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+}
+
+.infobox {
+    background-color: #FFFFFF;
+    height: 60px;
+    border: 1px solid rgb(155, 155, 155);
+    margin: 10px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infobox p a {
+    font-weight: bold;
+    user-select: none;
+}
+
+.get-app-panel {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.app-buttons {
+    margin-top: 16px;
+
+}
+
+.app-buttons img {
+    height: 40px;
+    padding: 0 2px;
+}
+
+footer {
+    text-align: center;
+    height: 50px;
+    margin-top: -50px;
+     
+
+}
+
+footer a{
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 8px;
+}
+ 
+.text-small{
+    font-size: 12px;
+    font-weight: bold;
+    color: grey;
+    text-transform: uppercase;
+    display:inline-block;
+    padding-left: 20px;
+
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*PAGINA SIGNUP*/
+#contaneir-signup{
+    margin: 0 auto;
+    min-height: 100%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.message{
+    margin: 10px 70px;
+
+}
+
+.message span{
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #8e8e8e;
+}
+
+.cta-button{
+    width: 320px;
+    max-width: 10px 0;
+    height: 35px;
+    background-color:var(--Color-button);
+
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.divisor-contaneir{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    
+}
+
+.line{
+    height: 1px;
+    background-color: #e6e6e6;
+    width: 35%;
+  
+}
+
+.divisor-tag{
+    font-weight: bold;
+    margin: 0 2.5%;
+    color: #8e8e8e;
+    user-select: none;
+}
+
+/* FIM PAGINA SIGNUP*/
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* RESPONSIVIDADE*/
+
+@media(max-width:850px ){
+    .left{
+        display: none;
+    }
+
+#contaneir{
+    width: 70%;
+
+}
+
+.right{
+    padding-left: 0;
+
+
+}
+
+}
+
+@media(max-width:560px ){
+    
+#contaneir{
+    width: 90%;
+}
+ #contanier-signup{
+    width: 90%;
+ }   
+
+ input[type="password"], input[type="text"], input[type="submit"]{
+    width: 85%;
+ }
+ .cta-button{
+    width: 85%;
+ }
+
+ .message{
+    margin: 10px 25px;
+ }
+}
